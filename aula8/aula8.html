@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão de Visita - Gabriel Landi</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
 
+   <nav class="navbar">
+        <a href="#inicio" alt="Ir para a área de apresentação">Início</a>
+        <a href="#lugares" alt="Ir para a área de lugares que eu gosto">Lugares</a>
+        <a href="#filmes" alt="Ir para a área de filmes que eu gosto">Filmes</a>
+        <a href="#hobbies" alt="Ir para a área de hobbies que eu gosto">Hobbies</a>
+        <a href="#contato" alt="Ir para área de contato comigo">Contato</a>
+    </nav>
+
+    <button id="btn-mono" class="btn-toggle">Modo Monocromático</button>
+    </nav>
+
+    <div class="container">
+        
+        <!-- Apresentação -->
+        <main id="inicio" class="card profile-card">
+            <img src="foto/GabrielLandi.jpeg" alt="Foto de Gabriel Landi" class="profile-img">
+            <h1>Gabriel Landi</h1>
+            <p class="bio">18 anos | Estudante de Análise e Desenvolvimento de Sistemas</p>
+        </main>
+
+        <!-- Lugares -->
+        <section id="lugares" class="card">
+            <h2>Lugares que Eu Gosto</h2>
+            <ol type="A" class="styled-list">
+                <li>Granja Viana</li>
+                <li>Carapicuíba</li>
+                <li>Alphaville</li>
+                <li>Barueri</li>
+            </ol>
+        </section>
+
+        <!-- Filmes -->
+        <section id="filmes" class="card">
+            <h2>Filmes Favoritos</h2>
+            <ol type="I" class="styled-list">
+                <li><a href="https://www.google.com/search?q=godzilla+minus+one" target="_blank">Godzilla</a></li>
+                <li><a href="https://www.google.com/search?q=trem+bala+filme" target="_blank">Trem Bala</a></li>
+                <li><a href="https://www.google.com/search?q=homem+aranha" target="_blank">Homem-Aranha</a></li>
+                <li><a href="https://www.google.com/search?q=homem+de+ferro" target="_blank">Homem de Ferro</a></li>
+            </ol>
+        </section>
+
+        <!-- Hobbies -->
+        <section id="hobbies" class="card">
+            <h2>Hobbies</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Atividades</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Desenhar</td></tr>
+                    <tr><td>Assistir filmes/séries</td></tr>
+                    <tr><td>Sair com os Amigos</td></tr>
+                    <tr><td>Ler</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="card">
+            <h2>Fale Comigo</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" required placeholder="Digite seu nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required placeholder="voce@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" rows="4" placeholder="Escreva sua mensagem..."></textarea>
+                </div>
+
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </section>
+
+    </div>
+
+    <script>
+        const btnMono = document.getElementById('btn-mono');
+        
+        btnMono.addEventListener('click', () => {
+            document.body.classList.toggle('monocromatico');
+            
+            // Alterna o texto do botão
+            if (document.body.classList.contains('monocromatico')) {
+                btnMono.textContent = 'Modo Colorido';
+            } else {
+                btnMono.textContent = 'Modo Monocromático';
+            }
+        });
+    </script>
+
+</body>
+</html>
